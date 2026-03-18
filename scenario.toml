@@ -9,7 +9,7 @@ env = { GEMINI_API_KEY = "${GEMINI_API_KEY}", LOGURU_LEVEL = "${LOGURU_LEVEL}" }
 
 [[participants]]
 # Submitters will fill in their purple agent details
-agentbeats_id = "019d016c-4e84-77f1-8d6f-3cb1aac01bde"  # Submitter: Replace with your purple agent ID
+image="ghcr.io/car-bench/car-bench-agentbeats-car-bench-agent:latest"
 name = "agent" # do not change
 # Submitter: Add your API keys as GitHub Secrets (use only what your model needs)
 env = { ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY}", AGENT_LLM = "claude-opus-4-6", AGENT_TEMPERATURE = 1.0, AGENT_THINKING = "true", LOGURU_LEVEL = "${LOGURU_LEVEL}" }
@@ -18,7 +18,7 @@ env = { ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY}", AGENT_LLM = "claude-opus-4-6
 # CAR-bench assessment parameters
 num_trials = 3                # Number of trials per task
 task_split = "test"  # "train" or "test"
-tasks_base_num_tasks = -1 # First N tasks in type/split, -1 for all.
-tasks_hallucination_num_tasks = -1 # First N tasks in type/split, -1 for all.
-tasks_disambiguation_num_tasks = -1 # First N tasks in type/split, -1 for all.
+tasks_base_num_tasks = 3 # First N tasks in type/split, -1 for all.
+tasks_hallucination_num_tasks = 1 # First N tasks in type/split, -1 for all.
+tasks_disambiguation_num_tasks = 1 # First N tasks in type/split, -1 for all.
 max_steps = 50
